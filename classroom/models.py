@@ -18,9 +18,9 @@ class Student(TimeStampedModel):
         return self.first_name
 
     def get_grade(self):
-        if self.average_score < 40:
+        if self.average_score <= 40:
             return "Fail"
-        elif 40 < self.average_score < 70:
+        elif 40 < self.average_score <= 70:
             return "Pass"
         elif 70 < self.average_score < 100:
             return "Excellent"
